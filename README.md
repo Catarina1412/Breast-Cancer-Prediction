@@ -2,7 +2,7 @@
  
  ## EN
 
-_In this repository, you will find various files related to a completed project. Included are a detailed project report, the dataset used, and the Python code implementing the project._
+_In this repository, you will find various files related to a completed project. Included are a detailed project report, the dataset used, and the Jupyter notebook implementing the project._
 
 * [Breast Cancer Classification.ipynb](<Breast Cancer Classification.ipynb>): contains the Jupyter notebook with the project code
 * [data.csv](data.csv): contains the data used in the project
@@ -11,30 +11,33 @@ _In this repository, you will find various files related to a completed project.
 
 **Objective:**
 
-This project aimed to analyze the "Drinking Water Probability" dataset with the goal of predicting whether a water sample is potable or not (1 or 0).
+The aim of this project is to predict breast cancer from a dataset.
 
 **Dataset Description:**
 
-Accessibility to clean drinkable water is essential for health and a fundamental human right, playing a crucial role in health and development at national, regional, and local levels. In some regions, it has been demonstrated that investments in water supply and sanitation can yield economic benefits, as the reductions in adverse health effects and health costs outweigh the costs of implementing interventions.
-The file water_potability.csv contains information on 9 metrics related to water quality for 3276 distinct water samples: pH value, Hardness, Total Dissolved Solids (TDS), Chloramines, Sulfate, Conductivity, Organic Carbon, Trihalomethanes and Turbidity.
+Breast cancer is the most diagnosed cancer in women, accounting for 1 in 4 annual cancer cases worldwide. In 2020, the incidence in the WHO Europe region was estimated at 576,300, and in the EU-27, it was 355,500. Approximately 21% of breast cancer cases in Europe occur in women under 50 years old, while 35% occur between 50 and 64 years old, and the remaining cases affect women above this age group. One in 11 women in the EU-27 will develop breast cancer before the age of 74.
+
+In this project, I used the Wisconsin Breast Cancer Dataset (WBCD) from the UCI Machine Learning repository, which provides very solid and useful information for the sole purpose of building models to predict whether cancer is benign or malignant. The dataset I worked with has 32 attributes (the 'ID' attribute is omitted) and 568 instances. 
+
 
 **Project Description:**
 
 The project followed several stages, including:
 
-_Data Exploration:_ Statistical analysis of features, representation of water distribution (potable/non-potable) through a pie chart from the plotly.express library, and studying water distribution in each column using the kdeplot method from the seaborn library. A correlation analysis of the data was also conducted.
+_Data Exploration:_ Visualizing the data and dataset size, analyzing the types of data in the dataset, transforming the 'diagnosis' column into 0 or 1, representing the distribution of cancer (malignant/benign), studying the relationship between the data using a pairplot from the seaborn library. An analysis of data correlation was also performed using a correlation matrix and a heatmap from the seaborn library.
 
-_Pre-processing:_ Identification of missing values and outliers, with illustrations to easy visualization. Missing values were treated using the KNN Imputer method from the scikit-learn library, with k=10. Regarding outliers, after analysis, it was decided not to treat them as they were considered plausible values.
+_Pre-processing:_ Removing the 'Id' variable, identifying and treating missing values.
 
-_Models:_ The data were split into X_train, X_test, y_train, and y_test sets, reserving 30% of the data for testing. The need to scale the data was identified. Subsequently, three models were used: SVC, MLP Classifier, and Random Forest, with GridSearchCV and Cross-validation.
-Results: Among the evaluated models, Random Forest achieved the best results, with an accuracy of 0.678.
+_Models:_ The data was split into X_train, X_test, y_train, and y_test sets, keeping 45% of the data for testing. It was discovered the need to scale the data using StandardScaler from the sklearn library Subsequently, eight models were used: Neural Network, KNeighborsClassifier, GaussianNB, linear SVC, rbf SVC, Logistic Regression, Decision Tree, and Random Forest Classifier.
+
+_Results:_ Among the evaluated models, rbf SVC achieved the best results, reaching an accuracy of 0.98.
 
 
 
 
 ## PT
 
-_Neste repositório, encontrar-se-ão diversos ficheiros relacionados com um projeto concluído. Incluem-se um relatório detalhado do projeto, o conjunto de dados utilizado e o código em Python da implementação do projeto._
+_Neste repositório, encontrar-se-ão diversos ficheiros relacionados com um projeto concluído. Incluem-se um relatório detalhado do projeto, o conjunto de dados utilizado e o Jupyter notebook da implementação do projeto._
 
 Ficheiros:
 * [Breast Cancer Classification.ipynb](<Breast Cancer Classification.ipynb>): contém o jupyter notebook com o código do projeto
@@ -44,21 +47,23 @@ Ficheiros:
 
 **Objetivo:**
 
-Este projeto teve como propósito a análise do conjunto de dados "Drinking Water Probability" com o intuito de prever se uma amostra de água é potável ou não (1 ou 0).
+O objetivo deste projeto é detetar o cancro da mama a partir de um conjunto de dados.
 
 **Descrição do Dataset:**
 
-A acessibilidade à água potável é essencial para a saúde e um direito humano básico, sendo muito importante como uma questão de saúde e desenvolvimento a nível nacional, regional e local. Em algumas regiões, foi demonstrado que os investimentos em abastecimentos de água e saneamento podem gerar um benefício económico, visto que as reduções nos efeitos adversos à saúde e nos custos de saúde superam os custos de realização das intervenções.
-O ficheiro water_potability.csv contém informações sobre 9 métricas relacionadas à qualidade da água, referentes a 3276 amostras de água distintas: Valor de pH, Dureza, Sólidos (Total de sólidos dissolvidos - TDS), Cloraminas, Sulfato, Condutividade, Carbono Orgânico, Trihalometanos e Turbidez.
+O cancro da mama é o cancro mais diagnosticado em mulheres, representando 1 em cada 4 casos anuais de cancro em todo o mundo. Em 2020, a incidência na região da OMS na Europa foi estimada em 576.300, e na UE-27 foi de 355.500. Aproximadamente 21% dos casos de cancro da mama na Europa ocorrem em mulheres com menos de 50 anos, enquanto 35% ocorrem entre os 50 e os 64 anos, e os restantes casos afetam mulheres acima dessa faixa etária. Uma em cada 11 mulheres na UE-27 desenvolverá cancro da mama antes dos 74 anos.
+
+Neste projeto, utilizei o Conjunto de Dados Público de Cancro da Mama de Wisconsin (WBCD) do repositório de Machine Learning da UCI, que fornece informações muito sólidas e úteis com o único propósito de construir modelos para prever se o cancro é benigno ou maligno. O conjunto de dados com o qual trabalhei possui 32 atributos (o atributo 'ID' é omitido) e 568 instâncias. 
+
 
 **Descrição do Projeto:**
 
 O projeto seguiu várias etapas, incluindo:
 
-_Exploração de dados:_ Análise estatística das features , representação da distribuição de água (potável/não potável) através de um pie chart da biblioteca plotly.express e estudo da distribuição da água em cada coluna usando o método kdeplot da biblioteca seaborn. Também foi realizada uma análise da correlação dos dados.
+_Exploração de dados:_ Visualização dos dados e do tamanho do conjunto de dados , análise do tipo de dados existentes no conjunto de dados e transformação da coluna “diagnosis” em 0 ou 1, representação da distribuição do cancro(maligno/benigno), estudo da relação entre os dados através de um pairplot da biblioteca seaborn .Também foi realizada uma análise da correlação dos dados usando uma matriz de correlação e um heatmap da biblioteca seaborn.
 
-_Pré-processamento:_ Identificação de valores em falta e outliers, com ilustrações para facilitar a visualização. Os valores em falta foram tratados utilizando o método KNN Imputer da biblioteca scikit-learn, com k=10. Quanto aos outliers, após análise, optei por não os tratar, pois eram considerados valores plausíveis.
+_Pré-processamento:_ Eliminação da variável “Id”, identificação e eliminação de valores em falta.
 
-_Modelos:_ Os dados foram divididos em conjuntos X_train, X_test, y_train e y_test, reservando 30% dos dados para teste. Verificou-se a necessidade de escalar os dados. Posteriormente, foram utilizados três modelos: SVC, MLP Classifier e Random Forest, com GridSearchCV e Cross-validation.
+_Modelos:_ : Os dados foram divididos em conjuntos X_train, X_test, y_train e y_test, reservando 45% dos dados para teste. Verificou-se a necessidade de escalar os dados usando o StandardScaler da biblioteca sklearn. Posteriormente, foram utilizados oito modelos: Neural Network, KNeighborsClassifier, GaussianNB, SVC linear,  SVC rbf, Logistic Regression, Decision Tree e Random Forest Classifier.
 
-_Resultados:_ Entre os modelos avaliados, o Random Forest obteve os melhores resultados, alcançando uma accuracy de 0.678.
+_Resultados:_ Entre os modelos avaliados, o SVC rbf obteve os melhores resultados, alcançando uma accuracy de 0.98.
