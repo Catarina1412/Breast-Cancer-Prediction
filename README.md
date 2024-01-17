@@ -1,7 +1,13 @@
 # Water Quality Prediction
  
- **EN**
+ ## EN
+
 _In this repository, you will find various files related to a completed project. Included are a detailed project report, the dataset used, and the Python code implementing the project._
+
+* [Breast Cancer Classification.ipynb](<Breast Cancer Classification.ipynb>): contains the Jupyter notebook with the project code
+* [data.csv](data.csv): contains the data used in the project
+* [Paper-Breast Cancer Classification.pdf](<Paper-Breast Cancer Classification.pdf>): project paper/report in English
+* [Paper-Classificação de cancro da mama.pdf](<Paper-Classificação de cancro da mama.pdf>): project paper/report in Portuguese
 
 **Objective:**
 
@@ -26,12 +32,16 @@ Results: Among the evaluated models, Random Forest achieved the best results, wi
 
 
 
-**PT**
+## PT
+
 _Neste repositório, encontrar-se-ão diversos ficheiros relacionados com um projeto concluído. Incluem-se um relatório detalhado do projeto, o conjunto de dados utilizado e o código em Python da implementação do projeto._
 
 Ficheiros:
-*[Br](<Breast Cancer Classification.ipynb>) contém o jupyter notebook com o código do projeto
-*[Title](data.csv)
+* [Breast Cancer Classification.ipynb](<Breast Cancer Classification.ipynb>): contém o jupyter notebook com o código do projeto
+* [data.csv](data.csv): contém os dados usados no projeto
+* [Paper-Breast Cancer Classification.pdf](<Paper-Breast Cancer Classification.pdf>): paper/relatório do projeto em inglês
+* [Paper-Classificação de cancro da mama.pdf](<Paper-Classificação de cancro da mama.pdf>): paper/relatório do projeto em português
+
 **Objetivo:**
 
 Este projeto teve como propósito a análise do conjunto de dados "Drinking Water Probability" com o intuito de prever se uma amostra de água é potável ou não (1 ou 0).
