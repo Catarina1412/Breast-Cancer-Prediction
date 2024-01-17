@@ -4,6 +4,7 @@
 
 _In this repository, you will find various files related to a completed project. Included are a detailed project report, the dataset used, and the Jupyter notebook implementing the project._
 
+Files:
 * [Breast Cancer Classification.ipynb](<Breast Cancer Classification.ipynb>): contains the Jupyter notebook with the project code
 * [data.csv](data.csv): contains the data used in the project
 * [Paper-Breast Cancer Classification.pdf](<Paper-Breast Cancer Classification.pdf>): project paper/report in English
